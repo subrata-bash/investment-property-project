@@ -97,7 +97,6 @@
 
         <div id="userbox" class="userbox">
             <a href="#" data-bs-toggle="dropdown">
-
                 <span class="profile-picture profile-picture-as-text">JD</span>
                 <div class="profile-info profile-info-no-role" data-lock-name="John Doe"
                     data-lock-email="johndoe@okler.com">

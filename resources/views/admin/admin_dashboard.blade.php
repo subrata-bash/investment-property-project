@@ -67,8 +67,8 @@
 
     <!-- Vendor -->
     <script src="{{ asset('backend/vendor/jquery/jquery.js') }}"></script>
-    <script src="{{ asset('bakcend/vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script>
-    <script src="{{ asset('backend/vendor/popper/umd/popper.min.js') }}"></script>
+    {{-- <script src="{{ asset('bakcend/vendor/jquery-browser-mobile/jquery.browser.mobile.js') }}"></script> --}}
+    {{-- <script src="{{ asset('backend/vendor/popper/umd/popper.min.js') }}"></script> --}}
     <script src="{{ asset('backend/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <script src="{{ asset('backend/vendor/bootstrap-datepicker/js/bootstrap-datepicker.js') }}"></script>
     <script src="{{ asset('backend/vendor/common/common.js') }}"></script>
@@ -92,7 +92,7 @@
     <script src="{{ asset('backend/vendor/morris/morris.js') }}"></script>
     <script src="{{ asset('backend/vendor/gauge/gauge.js') }}"></script>
     <script src="{{ asset('backend/vendor/snap.svg/snap.svg.js') }}"></script>
-    <script src="vendor/liquid-meter/liquid.meter.js"></script>
+    <script src="{{ asset('backend/vendor/liquid-meter/liquid.meter.js') }}"></script>
     <script src="{{ asset('backend/vendor/jqvmap/jquery.vmap.js') }}"></script>
     <script src="{{ asset('backend/vendor/jqvmap/data/jquery.vmap.sampledata.js') }}"></script>
     <script src="{{ asset('backend/vendor/jqvmap/maps/jquery.vmap.world.js') }}"></script>
