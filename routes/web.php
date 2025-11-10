@@ -22,6 +22,7 @@ Route::middleware(['auth', IsUser::class])->group(function () {
 Route::middleware(['auth', IsAdmin::class])->group(function () {
 
     Route::get('/admin/dashboard', [AdminController::class, 'adminDashboard'])->name('admin.dashboard');
+    Route::post('/admin/logout', [AdminController::class, 'adminLogout'])->name('admin.logout');
 });
 
 

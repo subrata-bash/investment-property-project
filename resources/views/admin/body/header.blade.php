@@ -118,8 +118,16 @@
                                 class="bx bx-lock-open-alt"></i> Lock Screen</a>
                     </li>
                     <li>
-                        <a role="menuitem" tabindex="-1" href="pages-signin.html"><i class="bx bx-log-out"></i>
-                            Logout</a>
+                        <form method="POST" action="{{ route('admin.logout') }}">
+                            @csrf
+
+                            <a role="menuitem" tabindex="-1" href="{{ route('admin.logout') }}"
+                                onclick="event.preventDefault();
+                            this.closest('form').submit();"><i
+                                    class="bx bx-log-out"></i>
+                                Logout</a>
+                        </form>
+
                     </li>
                 </ul>
             </div>
