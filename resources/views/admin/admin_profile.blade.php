@@ -39,12 +39,12 @@
                         <hr class="dotted short">
 
                         <div class="social-icons-list">
-                            <a rel="tooltip" data-bs-placement="bottom" target="_blank" href="http://www.facebook.com"
+                            <a rel="tooltip" data-bs-placement="bottom" target="_blank" href="#"
                                 data-original-title="Facebook"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
-                            <a rel="tooltip" data-bs-placement="bottom" href="http://www.twitter.com"
-                                data-original-title="Twitter"><i class="fab fa-twitter"></i><span>Twitter</span></a>
-                            <a rel="tooltip" data-bs-placement="bottom" href="http://www.linkedin.com"
-                                data-original-title="Linkedin"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
+                            <a rel="tooltip" data-bs-placement="bottom" href="#" data-original-title="Twitter"><i
+                                    class="fab fa-twitter"></i><span>Twitter</span></a>
+                            <a rel="tooltip" data-bs-placement="bottom" href="#" data-original-title="Linkedin"><i
+                                    class="fab fa-linkedin-in"></i><span>Linkedin</span></a>
                         </div>
 
                     </div>
