@@ -109,7 +109,7 @@
             <div class="dropdown-menu">
                 <ul class="list-unstyled">
                     <li>
-                        <a role="menuitem" tabindex="-1" href="pages-user-profile.html"><i class="bx bx-user"></i>
+                        <a role="menuitem" tabindex="-1" href="{{ route('admin.profile') }}"><i class="bx bx-user"></i>
                             My Profile</a>
                     </li>
                     <li>
