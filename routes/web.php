@@ -33,6 +33,9 @@ Route::middleware(['auth', IsAdmin::class])->group(function () {
     Route::controller(PropertyController::class)->group(function () {
         Route::get('/all/times', 'allTimes')->name('all.times');
         Route::get('/add/times', 'addTimes')->name('add.times');
+        Route::post('/stor/times', 'storeTimes')->name('store.times');
+        Route::get('/edit/times/{id}', 'editTimes')->name('edit.times');
+        Route::post('/update/times', 'updateTimes')->name('update.times');
     });
 });
 
