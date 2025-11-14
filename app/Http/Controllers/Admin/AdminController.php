@@ -31,4 +31,37 @@ class AdminController extends Controller
         $profileData = User::findorFail($id);
         return view('admin.admin_profile', compact('profileData'));
     }
+    public function adminProfileUpdate(Request $request)
+    {
+        $id = Auth::user()->id;
+        $data = User::findorFail($id);
+
+        $data->name = $request->name;
+        $data->email = $request->email;
+        $data->first_name = $request->first_name;
+        $data->last_name = $request->last_name;
+        $data->phone = $request->phone;
+        $data->address = $request->address;
+
+        $oldPhotoPath = $data->photo;
+        if ($request->hasFile('photo')) {
+            $file = $request->file('photo');
+            $fileName = time() . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path('upload/profile_images'), $fileName);
+            $data->photo = $fileName;
+
+            if ($oldPhotoPath && $oldPhotoPath !== $fileName) {
+                $this->deleteOldImage($oldPhotoPath);
+            }
+        }
+        $data->save();
+        return redirect()->back();
+    }
+    private function deleteOldImage($oldPhotoPath)
+    {
+        $fullPath = public_path('upload/profile_images/' . $oldPhotoPath);
+        if (file_exists($fullPath)) {
+            unlink($fullPath);
+        }
+    }
 }
