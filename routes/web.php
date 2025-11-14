@@ -4,6 +4,7 @@ use App\Http\Middleware\IsUser;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\PropertyController;
 use App\Http\Middleware\IsAdmin;
 
 Route::get('/', function () {
@@ -27,6 +28,11 @@ Route::middleware(['auth', IsAdmin::class])->group(function () {
     Route::post('/admin/profile/update', [AdminController::class, 'adminProfileUpdate'])->name('admin.profile.update');
     Route::get('/admin/change/password', [AdminController::class, 'adminChangePassword'])->name('admin.change.password');
     Route::post('/admin/password/update', [AdminController::class, 'adminPasswordUpdate'])->name('admin.password.update');
+
+    // time CURD
+    Route::controller(PropertyController::class)->group(function () {
+        Route::get('/all/times', 'allTimes')->name('all.times');
+    });
 });
 
 

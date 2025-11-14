@@ -21,17 +21,22 @@
                     <li class="nav-parent">
                         <a class="nav-link" href="#">
                             <i class="bx bx-cart-alt" aria-hidden="true"></i>
-                            <span>eCommerce</span>
+                            <span>Properties</span>
                         </a>
                         <ul class="nav nav-children">
                             <li>
                                 <a class="nav-link" href="ecommerce-dashboard.html">
-                                    - Dashboard
+                                    - All Property
+                                </a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="{{ route('all.times') }}">
+                                    - Manage Time
                                 </a>
                             </li>
                             <li>
                                 <a class="nav-link" href="ecommerce-products-list.html">
-                                    - Products List
+                                    - Manage Location
                                 </a>
                             </li>
                         </ul>
