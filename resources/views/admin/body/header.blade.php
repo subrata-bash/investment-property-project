@@ -114,8 +114,8 @@
                             My Profile</a>
                     </li>
                     <li>
-                        <a role="menuitem" tabindex="-1" href="#" data-lock-screen="true"><i
-                                class="bx bx-lock-open-alt"></i> Lock Screen</a>
+                        <a role="menuitem" tabindex="-1" href="{{ route('admin.change.password') }}">Change
+                            Password</a>
                     </li>
                     <li>
                         <form method="POST" action="{{ route('admin.logout') }}">

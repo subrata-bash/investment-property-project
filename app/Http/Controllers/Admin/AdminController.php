@@ -68,4 +68,8 @@ class AdminController extends Controller
             unlink($fullPath);
         }
     }
+    public function adminChangePassword()
+    {
+        return view('admin.change_password');
+    }
 }
