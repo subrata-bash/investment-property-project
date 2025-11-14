@@ -35,7 +35,8 @@ Route::middleware(['auth', IsAdmin::class])->group(function () {
         Route::get('/add/times', 'addTimes')->name('add.times');
         Route::post('/stor/times', 'storeTimes')->name('store.times');
         Route::get('/edit/times/{id}', 'editTimes')->name('edit.times');
-        Route::post('/update/times', 'updateTimes')->name('update.times');
+        Route::put('/update/times', 'updateTimes')->name('update.times');
+        Route::get('/delete/times/{id}', 'deleteTimes')->name('delete.times');
     });
 });
 

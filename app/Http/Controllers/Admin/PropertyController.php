@@ -48,4 +48,14 @@ class PropertyController extends Controller
         ];
         return redirect()->route('all.times')->with($notification);
     }
+    public function deleteTimes($id)
+    {
+        Time::findOrFail($id)->delete();
+        $notification = [
+            'message' => 'Time Deleted Successfully',
+            'alert-type' => 'success'
+        ];
+        return redirect()->back()->with($notification);
+
+    }
 }

@@ -7,6 +7,7 @@
         <div class="row">
             <form action="{{ route('update.times') }}" method="POST">
                 @csrf
+                @method('PUT')
                 <input type="hidden" name="id" value="{{ $time->id }}">
                 <div class="col-lg-12">
                     <section class="card">
