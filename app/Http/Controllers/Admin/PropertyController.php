@@ -15,4 +15,8 @@ class PropertyController extends Controller
         return view('admin.backend.time.all_time', compact('times'));
 
     }
+    public function addTimes()
+    {
+        return view('admin.backend.time.add_time' );
+    }
 }
