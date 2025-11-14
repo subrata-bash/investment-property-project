@@ -97,10 +97,10 @@
 
         <div id="userbox" class="userbox">
             <a href="#" data-bs-toggle="dropdown">
-                <span class="profile-picture profile-picture-as-text">JD</span>
-                <div class="profile-info profile-info-no-role" data-lock-name="John Doe"
-                    data-lock-email="johndoe@okler.com">
-                    <span class="name">Hi, <strong class="font-weight-semibold">John Doe</strong></span>
+                <span class="profile-picture profile-picture-as-text">AD</span>
+                <div class="profile-info profile-info-no-role" data-lock-name="Admin"
+                    data-lock-email="admin@example.com">
+                    <span class="name">Hi, <strong class="font-weight-semibold">Admin</strong></span>
                 </div>
 
                 <i class="fas fa-chevron-down text-color-dark"></i>
@@ -109,7 +109,8 @@
             <div class="dropdown-menu">
                 <ul class="list-unstyled">
                     <li>
-                        <a role="menuitem" tabindex="-1" href="{{ route('admin.profile') }}"><i class="bx bx-user"></i>
+                        <a role="menuitem" tabindex="-1" href="{{ route('admin.profile') }}"><i
+                                class="bx bx-user"></i>
                             My Profile</a>
                     </li>
                     <li>

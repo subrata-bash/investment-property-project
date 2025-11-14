@@ -8,6 +8,9 @@
 
     <title>Admin Dashboard</title>
 
+
+
+
     <meta name="keywords" content="HTML5 Admin Template" />
     <meta name="description" content="Porto Admin - Responsive HTML5 Template">
     <meta name="author" content="okler.net">
@@ -18,6 +21,7 @@
     <!-- Web Fonts  -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800|Shadows+Into+Light"
         rel="stylesheet" type="text/css">
+
 
     <!-- Vendor CSS -->
     <link rel="stylesheet" href="{{ asset('backend/vendor/bootstrap/css/bootstrap.css') }}" />
@@ -45,6 +49,9 @@
 
     <!-- Head Libs -->
     <script src="{{ asset('backend/vendor/modernizr/modernizr.js') }}"></script>
+
+    <!--  toastr css   -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
 </head>
 
@@ -115,6 +122,30 @@
     <!-- Examples -->
     <script src="{{ asset('backend/js/examples/examples.dashboard.js') }}"></script>
 
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+        @if (Session::has('message'))
+            var type = "{{ Session::get('alert-type', 'info') }}"
+            switch (type) {
+                case 'info':
+                    toastr.info("{{ Session::get('message') }}");
+                    break;
+
+                case 'success':
+                    toastr.success("{{ Session::get('message') }}");
+                    break;
+
+                case 'warning':
+                    toastr.warning("{{ Session::get('message') }}");
+                    break;
+
+                case 'error':
+                    toastr.error("{{ Session::get('message') }}");
+                    break;
+            }
+        @endif
+    </script>
 </body>
 
 </html>
