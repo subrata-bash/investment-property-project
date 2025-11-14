@@ -5,7 +5,8 @@
             <h2>User Profile</h2>
         </header>
         <div class="row">
-            <form action="">
+            <form action="{{ route('admin.password.update') }}" method="POST">
+                @csrf
                 <div class="col-lg-12">
                     <section class="card">
                         <header class="card-header">
